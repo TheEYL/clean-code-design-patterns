@@ -1,19 +1,23 @@
 package StrategyPattern;
 
+import StrategyPattern.interfaces.FlyBehaviour;
+import StrategyPattern.interfaces.QuackBehaviour;
+
 import java.util.function.Supplier;
 
 public class Duck {
-    public String quack(){
-         Supplier<String> quack = () -> "Quack...! Quack!";
-         return quack.get();
-    };
+    protected FlyBehaviour flyBehaviour;
+    protected QuackBehaviour quackBehaviour;
+
     public String swim(){
         Supplier<String> swimmingSound = ()-> "...swmming Sounds";
         return swimmingSound.get();
     };
-
-    public String fly() {
-        return "This duck is flying";
+    public String quack(){
+        return this.quackBehaviour.quack();
+    }
+    public String fly(){
+        return this.flyBehaviour.fly();
     }
 }
 
