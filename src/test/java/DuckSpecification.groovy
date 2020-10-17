@@ -7,7 +7,7 @@ import org.assertj.core.api.*;
 
 class DuckSpecification extends Specification {
 
-    def "duck should quack"() {
+    def "real ducks should quack"() {
         given:
             MallardDuck md = new MallardDuck()
             RedheadDuck rd = new RedheadDuck()
@@ -34,12 +34,6 @@ class DuckSpecification extends Specification {
             BDDAssertions.then(rd.display()).contains("redhead")
     }
 
-    def "Ducks should fly" () {
-        given:
-            Duck duck  = new Duck()
-        expect:
-            BDDAssertions.then(duck.fly()).contains("flying")
-    }
 
     def "RubberDuck should squeak" ( ) {
         given :
@@ -59,6 +53,6 @@ class DuckSpecification extends Specification {
         given:
             RubberDuck rd  = new RubberDuck()
         expect:
-            BDDAssertions.then(rd.fly()).isEqualTo("Plastic does not fly")
+            BDDAssertions.then(rd.fly()).isEqualTo("Do nothing -can't fly")
     }
 }
