@@ -13,11 +13,12 @@ public class Duck {
         Supplier<String> swimmingSound = ()-> "...swmming Sounds";
         return swimmingSound.get();
     };
-    public String quack(){
-        return this.quackBehaviour.quack();
+    public String performQuack(){
+        return quackBehaviour.quack();
     }
-    public String fly(){
-        return this.flyBehaviour.fly();
+    public String performFly(){
+        return flyBehaviour.fly();
     }
+;
 }
 
