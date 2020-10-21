@@ -1,3 +1,5 @@
+package StrategyPattern
+
 import StrategyPattern.Duck
 import StrategyPattern.Hunter
 import StrategyPattern.MallardDuck

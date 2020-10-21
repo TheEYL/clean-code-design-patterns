@@ -1,8 +1,6 @@
-import ObserverPattern.AnotherDisplay
-import ObserverPattern.CurrentConditionsDisplay
-import ObserverPattern.HeatIndexDisplay
-import ObserverPattern.MyObserver
-import ObserverPattern.WeatherData
+package ObserverPattern
+
+
 import org.assertj.core.api.BDDAssertions;
 import spock.lang.Specification;
 
